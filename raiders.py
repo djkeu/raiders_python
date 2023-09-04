@@ -1,10 +1,10 @@
-# Try it yourself 12.1 Blue sky, p.238
 print("\n\tRaiders of the Lost Gloves\n")
 
 import sys
 import pygame
 
 from settings import Settings
+
 
 class Raiders:
     """Class to manage the game."""
