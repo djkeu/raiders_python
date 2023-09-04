@@ -14,4 +14,15 @@ class Raiders:
         self.screen = pygame.display.set_mode((960, 640))
         pygame.display.set_caption("Raiders of the Lost Gloves")
 
-    
+    def run_game(self):
+        """Main loop for the game."""
+        while True:
+            for event in pygame.event.get():
+                if event.type == pygame.QUIT or event.type == pygame.KEYDOWN and event.key == pygame.K_ESCAPE:
+                    sys.exit()
+
+            pygame.display.flip()
+
+if __name__ == '__main__':
+    raiders = Raiders()
+    raiders.run_game()
