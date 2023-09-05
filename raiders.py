@@ -36,6 +36,7 @@ class Raiders:
                 if event.type == pygame.QUIT or event.type == pygame.KEYDOWN and event.key == pygame.K_ESCAPE:
                     sys.exit()
                 
+                # TODO: Make movement continuous
                 # Move the camera to the right
                 elif event.type == pygame.KEYDOWN and event.key == pygame.K_RIGHT:
                     self.camera.rect.x += 5
