@@ -27,6 +27,7 @@ class Raiders:
             self._check_events()
             self._update_screen()
 
+
     def _check_events(self):
         for event in pygame.event.get():
                 # Quit game
