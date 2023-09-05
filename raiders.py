@@ -23,9 +23,9 @@ class Raiders:
 
     def run_game(self):
         """Main loop for the game."""
+        game_running = True
 
-        while True:
-
+        while game_running:
             self._check_events()
             self._update_screen()
 
