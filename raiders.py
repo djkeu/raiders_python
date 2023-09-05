@@ -26,27 +26,11 @@ class Raiders:
 
         while True:
 
-            # TODO: Move events-code to check_events(self)
-            for event in pygame.event.get():
-                # Quit game
-                if event.type == pygame.QUIT or event.type == pygame.KEYDOWN and event.key == pygame.K_ESCAPE:
-                    sys.exit()
-                
-                # Move the camera to the right
-                elif event.type == pygame.KEYDOWN and event.key == pygame.K_RIGHT:
-                    self.camera.rect.x += 5
-                
-                # Move the camera to the left
-                elif event.type == pygame.KEYDOWN and event.key == pygame.K_LEFT:
-                    self.camera.rect.x -= 5
+            self._check_events()
+            self._update_screen()
 
-            # TODO: Move code to update_screen(self)
-            self.screen.fill(self.settings.bg_color)
-            self.camera.blitme()
-
-            pygame.display.flip()
-
-    def _check_events(self)
+    def _check_events(self):
+        """Check for mouse and keyboard input."""
         for event in pygame.event.get():
                 # Quit game
                 if event.type == pygame.QUIT or event.type == pygame.KEYDOWN and event.key == pygame.K_ESCAPE:
@@ -60,6 +44,12 @@ class Raiders:
                 elif event.type == pygame.KEYDOWN and event.key == pygame.K_LEFT:
                     self.camera.rect.x -= 5
 
+    def _update_screen(self):
+            """Update screen, flip to new screen."""
+            self.screen.fill(self.settings.bg_color)
+            self.camera.blitme()
+
+            pygame.display.flip()
         
 
 if __name__ == '__main__':
