@@ -7,6 +7,7 @@ class Camera:
         self.screen = raiders_game.screen
         self.screen_rect = raiders_game.screen.get_rect()
     
+        # TODO: Move image selection to settings.py ??
         self.image = pygame.image.load('images/shutterOpenedSmall.png').convert_alpha()
         self.rect = self.image.get_rect()
 
