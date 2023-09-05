@@ -8,10 +8,9 @@ from camera import Camera
 
 
 class Raiders:
-    """Class to manage the game."""
+    """Class to manage Raiders of the Lost Gloves."""
 
     def __init__(self) -> None:
-        """Initialize the game and resources."""
         pygame.init()
         self.settings = Settings()
 
@@ -22,7 +21,6 @@ class Raiders:
         self.camera = Camera(self)
 
     def run_game(self):
-        """Main loop for the game."""
         game_running = True
 
         while game_running:
@@ -30,7 +28,6 @@ class Raiders:
             self._update_screen()
 
     def _check_events(self):
-        """Check for mouse and keyboard input."""
         for event in pygame.event.get():
                 # Quit game
                 if event.type == pygame.QUIT or event.type == pygame.KEYDOWN and event.key == pygame.K_ESCAPE:
@@ -46,7 +43,6 @@ class Raiders:
                     self.camera.rect.x -= 5
 
     def _update_screen(self):
-            """Update screen, flip to new screen."""
             self.screen.fill(self.settings.bg_color)
             self.camera.blitme()
 
@@ -54,5 +50,5 @@ class Raiders:
         
 
 if __name__ == '__main__':
-    raiders = Raiders()
-    raiders.run_game()
+    rlg = Raiders()  # Raiders of the Lost Gloves
+    rlg.run_game()
