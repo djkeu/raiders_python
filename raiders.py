@@ -8,7 +8,7 @@ from camera import Camera
 
 
 class Raiders:
-    """Class to manage Raiders of the Lost Gloves."""
+    """Raiders of the Lost Gloves."""
 
     def __init__(self) -> None:
         pygame.init()
@@ -25,23 +25,29 @@ class Raiders:
 
         while game_running:
             self._check_events()
+            self.camera.update_position()
             self._update_screen()
 
 
     def _check_events(self):
         for event in pygame.event.get():
-                # Quit game
-                if event.type == pygame.QUIT or event.type == pygame.KEYDOWN and event.key == pygame.K_ESCAPE:
-                    sys.exit()
+            # Quit game
+            if event.type == pygame.QUIT or event.type == pygame.KEYDOWN and event.key == pygame.K_ESCAPE:
+                sys.exit()
+            
+            # Move the camera
+            elif event.type == pygame.KEYDOWN:
+                if event.key == pygame.K_RIGHT:
+                    self.camera.moving_right = True
+                elif event.key == pygame.K_LEFT:
+                    self.camera.moving_left = True
+
+            elif event.type == pygame.KEYUP:
+                if event.key == pygame.K_RIGHT:
+                        self.camera.moving_right = False
+                elif event.key == pygame.K_LEFT:
+                        self.camera.moving_left = False
                 
-                # TODO: Make movement continuous
-                # Move the camera to the right
-                elif event.type == pygame.KEYDOWN and event.key == pygame.K_RIGHT:
-                    self.camera.rect.x += 5
-                
-                # Move the camera to the left
-                elif event.type == pygame.KEYDOWN and event.key == pygame.K_LEFT:
-                    self.camera.rect.x -= 5
 
     def _update_screen(self):
             self.screen.fill(self.settings.bg_color)
