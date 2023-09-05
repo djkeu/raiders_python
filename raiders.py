@@ -4,6 +4,7 @@ import sys
 import pygame
 
 from settings import Settings
+from camera import Camera
 
 
 class Raiders:
@@ -18,6 +19,8 @@ class Raiders:
             (self.settings.screen_width, self.settings.screen_height))
         pygame.display.set_caption("Raiders of the Lost Gloves")
 
+        self.camera = Camera(self)
+
     def run_game(self):
         """Main loop for the game."""
         while True:
@@ -26,6 +29,7 @@ class Raiders:
                     sys.exit()
 
             self.screen.fill(self.settings.bg_color)
+            self.camera.blitme()
 
             pygame.display.flip()
 
