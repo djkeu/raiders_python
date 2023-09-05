@@ -46,6 +46,21 @@ class Raiders:
 
             pygame.display.flip()
 
+    def _check_events(self)
+        for event in pygame.event.get():
+                # Quit game
+                if event.type == pygame.QUIT or event.type == pygame.KEYDOWN and event.key == pygame.K_ESCAPE:
+                    sys.exit()
+                
+                # Move the camera to the right
+                elif event.type == pygame.KEYDOWN and event.key == pygame.K_RIGHT:
+                    self.camera.rect.x += 5
+                
+                # Move the camera to the left
+                elif event.type == pygame.KEYDOWN and event.key == pygame.K_LEFT:
+                    self.camera.rect.x -= 5
+
+        
 
 if __name__ == '__main__':
     raiders = Raiders()
