@@ -9,8 +9,7 @@ class Camera:
 
         self.settings = raiders_game.settings
     
-        # TODO: Move image selection to settings.py ??
-        self.image = pygame.image.load('images/shutterOpenedSmall.png').convert_alpha()
+        self.image = pygame.image.load(self.settings.camera_closed).convert_alpha()
         self.rect = self.image.get_rect()
 
         self.rect.midbottom = self.screen_rect.midbottom
