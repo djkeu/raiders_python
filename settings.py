@@ -5,7 +5,7 @@ class Settings:
         """Initialize game settings."""
         # Screen settings
         self.bg_color = (230, 230, 130)
-        # Windowed screen mode
+        # Windowed screen mode # TODO: remove when obsolete
         self.screen_width = 960
         self.screen_height = 640
 
