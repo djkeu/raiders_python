@@ -4,9 +4,10 @@ class Settings:
     def __init__(self) -> None:
         """Initialize game settings."""
         # Screen settings
+        self.bg_color = (230, 230, 130)
+        # Windowed screen mode
         self.screen_width = 960
         self.screen_height = 640
-        self.bg_color = (230, 230, 130)
 
         # Camera settings
         self.camera_speed = 0.5
