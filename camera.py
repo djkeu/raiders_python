@@ -21,9 +21,9 @@ class Camera:
 
 
     def update_position(self):
-        if self.moving_right == True:
+        if self.moving_right and self.rect.right < self.screen_rect.right:
             self.x += self.settings.camera_speed
-        if self.moving_left == True:
+        if self.moving_left and self.rect.left > 0:
             self.x -= self.settings.camera_speed
 
         self.rect.x = self.x
