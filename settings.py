@@ -9,7 +9,7 @@ class Settings:
         self.bg_color = (230, 230, 130)
 
         # Camera settings
-        self.camera_speed = 0.1
+        self.camera_speed = 0.5
         self.camera_closed = 'images/shutterClosedSmall.png'
         self.camera_opened = 'images/shutterOpenedSmall.png'
 
