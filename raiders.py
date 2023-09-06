@@ -14,10 +14,11 @@ class Raiders:
         pygame.init()
         self.settings = Settings()
 
-        # Windowed mode, TODO: remove when thought obsolete
-        # self.screen = pygame.display.set_mode(
-        #    (self.settings.screen_width, self.settings.screen_height))
-        
+        # Windowed screen mode
+        """
+        self.screen = pygame.display.set_mode(
+            (self.settings.screen_width, self.settings.screen_height))
+        """
         # Full screen
         self.screen = pygame.display.set_mode((0, 0), pygame.FULLSCREEN)
         self.settings.screen_width = self.screen.get_rect().width
