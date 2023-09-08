@@ -59,7 +59,6 @@ class Raiders:
                 self.camera.moving_right = False
         elif event.key == pygame.K_LEFT:
                 self.camera.moving_left = False
-         
 
     def _update_screen(self):
             self.screen.fill(self.settings.bg_color)
