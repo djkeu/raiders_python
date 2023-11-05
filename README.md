@@ -8,3 +8,12 @@ https://scratch.mit.edu/projects/784244429/
 
 Facebook group 'Verloren handschoenen' (lost gloves):
 https://www.facebook.com/groups/189634299502920/
+
+
+# Files:
+main.py
+settings.py
+
+camera.py
+
+photoTexts.txt
