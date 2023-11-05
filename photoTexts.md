@@ -1,7 +1,11 @@
 # Texts to display when gloves are spotted
+(choose one)
 
-Another glove succesfully put on photo!
 
-Another glove succesfully captured on the sensitive plate!
+- Another glove succesfully put on photo!
 
-You have succesfully caught another (lost) glove on camera!
+- Another glove succesfully captured on the sensitive plate!
+
+- You have succesfully caught another (lost) glove on camera!
+
+- ..
