@@ -1,3 +1,5 @@
+# Texts to display when gloves are spotted
+
 Another glove succesfully put on photo!
 
 Another glove succesfully captured on the sensitive plate!
