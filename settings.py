@@ -13,4 +13,3 @@ class Settings:
         self.camera_speed = 0.5
         self.camera_closed = 'images/shutterClosedSmall.png'
         self.camera_opened = 'images/shutterOpenedSmall.png'
-
