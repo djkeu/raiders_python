@@ -15,7 +15,6 @@ class Raiders:
         self.settings = Settings()
 
         # Windowed screen mode
-        """
         self.screen = pygame.display.set_mode(
             (self.settings.screen_width, self.settings.screen_height))
         """
@@ -24,6 +23,7 @@ class Raiders:
         self.settings.screen_width = self.screen.get_rect().width
         self.settings.screen_height = self.screen.get_rect().height
         pygame.display.set_caption("Raiders of the Lost Gloves")
+        """
 
         self.camera = Camera(self)
 
@@ -38,7 +38,8 @@ class Raiders:
     def _check_events(self):
         for event in pygame.event.get():
             # Quit game
-            if event.type == pygame.QUIT or event.type == pygame.KEYDOWN and event.key == pygame.K_ESCAPE:
+            if event.type == pygame.QUIT or (event.type == pygame.KEYDOWN and event.key == pygame.K_q):
+                pygame.quit()
                 sys.exit()
             
             # Move the camera
@@ -67,5 +68,5 @@ class Raiders:
         
 
 if __name__ == '__main__':
-    rlg = Raiders()  # Raiders of the Lost Gloves
-    rlg.run_game()
+    raiders = Raiders()  # Raiders of the Lost Gloves
+    raiders.run_game()
