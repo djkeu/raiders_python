@@ -42,7 +42,6 @@ class Raiders:
                 pygame.quit()
                 sys.exit()
             
-            # Move the camera
             elif event.type == pygame.KEYDOWN:
                 self._check_keydown_events(event)
             elif event.type == pygame.KEYUP:
