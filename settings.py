@@ -7,6 +7,7 @@ class Settings:
         self.bg_color = (230, 230, 130)
         self.screen_width = 960
         self.screen_height = 640
+        self.caption = "Raiders of the Lost Gloves"
 
         # Camera settings
         self.camera_speed = 0.5

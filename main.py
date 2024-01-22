@@ -14,16 +14,16 @@ class Raiders:
         pygame.init()
         self.settings = Settings()
 
-        # Windowed screen mode
+        # Windowed mode
         self.screen = pygame.display.set_mode(
             (self.settings.screen_width, self.settings.screen_height))
-        """
         # Full screen
+        """
         self.screen = pygame.display.set_mode((0, 0), pygame.FULLSCREEN)
         self.settings.screen_width = self.screen.get_rect().width
         self.settings.screen_height = self.screen.get_rect().height
-        pygame.display.set_caption("Raiders of the Lost Gloves")
         """
+        pygame.display.set_caption(self.settings.caption)
 
         self.camera = Camera(self)
 
