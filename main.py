@@ -13,19 +13,19 @@ class Raiders:
     def __init__(self) -> None:
         pygame.init()
         self.settings = Settings()
+        self.camera = Camera(self)
 
         # Full screen
         self.screen = pygame.display.set_mode((0, 0), pygame.FULLSCREEN)
         self.settings.screen_width = self.screen.get_rect().width
         self.settings.screen_height = self.screen.get_rect().height
         pygame.display.set_caption(self.settings.caption)
-        """
+
         # Windowed mode
+        """
         self.screen = pygame.display.set_mode(
             (self.settings.screen_width, self.settings.screen_height))
         """
-
-        self.camera = Camera(self)
 
     def run_game(self):
         game_running = True
